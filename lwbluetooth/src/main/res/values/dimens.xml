@@ -1,0 +1,6 @@
+<resources>
+    <dimen name="icon_padding">12dp</dimen>
+    <dimen name="view_margin_horizontal">10dp</dimen>
+    <dimen name="view_margin_vertical">5dp</dimen>
+    <dimen name="content_padding">6dp</dimen>
+</resources>

@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">LWBluetooth</string>
+    <!---->
+    <string name="scan_title">扫描设备</string>
+    <string name="scan_start">开始扫描</string>
+    <string name="scan_scanning">扫描中...</string>
+</resources>

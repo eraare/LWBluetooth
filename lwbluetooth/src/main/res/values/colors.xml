@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--主色调-->
+    <color name="main">#3DBD77</color>
+    <!--页面颜色-->
+    <color name="greya">#F0F0F0</color>
+    <!--选中背景颜色-->
+    <color name="greyb">#ECECEC</color>
+    <!--未选中颜色-->
+    <color name="greye">#F4F4F4</color>
+    <!--边框颜色-->
+    <color name="greyc">#C6C6C6</color>
+    <!--字体颜色-->
+    <color name="greyd">#7F7F7F</color>
+    <!--其它字体颜色-->
+    <color name="greyf">#8E8E8E</color>
+
+    <!--七彩色-->
+    <color name="red">#ff0000</color>
+    <color name="orange">#ff7f00</color>
+    <color name="yellow">#ffff00</color>
+    <color name="green">#00ff00</color>
+    <color name="cyan">#00ffff</color>
+    <color name="blue">#0000ff</color>
+    <color name="purple">#ff00ff</color>
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+</resources>
