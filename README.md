@@ -1,8 +1,5 @@
-# LWBluetooth
-Provide Android Bluetooth serial communication service. As the Client(the mobile) can communicate with Multi Server(the bluetooth equipment) at the same time.
-
 Feature
-So easy to use.
+So easy to use. 
 One to Many(<=7). One Client can communicate with multi Server at the same time.
 Two mode. Use the Service(BluetoothService) or No Service(BluetoothCenter).
 Rich Method interface. openBluetooth\closeBluetooth\isSupportBluetooth\unpair and so on.
@@ -134,9 +131,9 @@ private BluetoothService.OnStateChangedListener mOnStateChangedListener = new Bl
         @Override
         public void onStateChanged(String deviceAddress, int state) {
             if (state == BluetoothConstant.STATE_CONNECT_FAIL) {
-
+                
             } else if (state == BluetoothConstant.STATE_CONNECT_SUCCESS) {
-
+                
             }
         }
     };
