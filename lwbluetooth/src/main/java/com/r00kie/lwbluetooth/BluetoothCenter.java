@@ -13,8 +13,8 @@ import java.util.Set;
 
 /**
  * @author Leo
- * @time 2016-08-05
- * @detail 蓝牙通信控制中心
+ * time 2016-08-05
+ * detail 蓝牙通信控制中心
  */
 public class BluetoothCenter {
     // 单例模式
@@ -88,8 +88,7 @@ public class BluetoothCenter {
 
     /**
      * 获取蓝牙适配器
-     *
-     * @return
+     * @return 蓝牙适配器
      */
     public BluetoothAdapter getBluetoothAdapter() {
         return this.mAdapter;
@@ -121,7 +120,8 @@ public class BluetoothCenter {
 
     /**
      * 判断是否支持蓝牙
-     * @return
+     *
+     * @return boolean
      */
     public boolean isSupportBluetooth() {
         if (mAdapter == null) {
@@ -136,7 +136,7 @@ public class BluetoothCenter {
     /**
      * 根据地址连接设备
      *
-     * @param deviceAddress
+     * @param deviceAddress addres
      */
     public boolean connect(String deviceAddress) {
         //地址为空就退出 别烦我
@@ -172,8 +172,8 @@ public class BluetoothCenter {
     /**
      * 向蓝牙设备写数据
      *
-     * @param deviceAddress
-     * @param message
+     * @param deviceAddress address
+     * @param message message
      */
     public boolean send(String deviceAddress, String message) {
         //如果你没给我消息 就别来烦我
@@ -269,10 +269,26 @@ public class BluetoothCenter {
     }
 
     /**
+     * 数据监听器
+     * @param mOnDataReceivedListener
+     */
+    public void setOnDataReceivedListener(OnDataReceivedListener mOnDataReceivedListener) {
+        this.mOnDataReceivedListener = mOnDataReceivedListener;
+    }
+
+    /**
+     * 状态监听器
+     * @param mOnStateChangedListener
+     */
+    public void setmOnStateChangedListener(OnStateChangedListener mOnStateChangedListener) {
+        this.mOnStateChangedListener = mOnStateChangedListener;
+    }
+
+    /**
      * 自杀函数
      * 我是隐藏的你敢要我死我就死给你看
      */
-    private void sucide() {
+    public void sucide() {
         disconnectAll();
         mConnectThreadMap = null;
         mConnectThread = null;
