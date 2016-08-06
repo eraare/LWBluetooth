@@ -13,8 +13,8 @@ import java.util.Set;
 
 /**
  * @author Leo
- * time 2016-08-05
- * detail 蓝牙通信控制中心
+ * @time 2016-08-05
+ * @detail 蓝牙通信控制中心
  */
 public class BluetoothCenter {
     // 单例模式
@@ -88,6 +88,7 @@ public class BluetoothCenter {
 
     /**
      * 获取蓝牙适配器
+     *
      * @return 蓝牙适配器
      */
     public BluetoothAdapter getBluetoothAdapter() {
@@ -173,7 +174,7 @@ public class BluetoothCenter {
      * 向蓝牙设备写数据
      *
      * @param deviceAddress address
-     * @param message message
+     * @param message       message
      */
     public boolean send(String deviceAddress, String message) {
         //如果你没给我消息 就别来烦我
@@ -270,6 +271,7 @@ public class BluetoothCenter {
 
     /**
      * 数据监听器
+     *
      * @param mOnDataReceivedListener
      */
     public void setOnDataReceivedListener(OnDataReceivedListener mOnDataReceivedListener) {
@@ -278,6 +280,7 @@ public class BluetoothCenter {
 
     /**
      * 状态监听器
+     *
      * @param mOnStateChangedListener
      */
     public void setmOnStateChangedListener(OnStateChangedListener mOnStateChangedListener) {
@@ -297,5 +300,13 @@ public class BluetoothCenter {
             mAdapter = null;
         }
         mHandler = null;
+    }
+
+    public void unpair(String deviceAddress) {
+        BluetoothUtil.unpairDevice(deviceAddress);
+    }
+
+    public void unpair(BluetoothDevice device) {
+        BluetoothUtil.unpairDevice(device);
     }
 }
