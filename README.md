@@ -11,6 +11,10 @@ Provide Android Bluetooth serial communication service. As the Client(the mobile
 # Simple Usage
 Download this library and then import into your workspace and include to your project. Library named lwbluetooth in the LWBluetoothDemo.
 
+```
+compile 'com.r00kie.lwbluetooth:lwbluetooth:1.0.0'
+```
+
 ## No Service Mode (BluetoothCenter)
 
 ### Declare permission
